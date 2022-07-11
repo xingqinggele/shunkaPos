@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:id="@+id/home_btn"
+        android:icon="@drawable/main_tab1"
+        android:title="首页" />
+
+
+    <item
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:id="@+id/me_btn"
+        android:icon="@drawable/main_tab3"
+        android:title="我的" />
+</menu>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#3CA0FF">
+        <!--返回键-->
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
+                android:src="@mipmap/back_whilte_left" />
+
+
+        </LinearLayout>
+        <!--标题-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="商户报件"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/query_linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/main_me_line_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/quote_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="联系人姓名"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quote_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/quote_tv1"
+                        android:text="*"
+                        android:textColor="#F80C0C"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/contact_name_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/quote_tv2"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入联系人姓名"
+                        android:maxLines="1"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F3F3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/quote_tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="联系人电话"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quote_tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/quote_tv3"
+                        android:text="*"
+                        android:textColor="#F80C0C"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/contact_phone_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/quote_tv4"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入联系人电话"
+                        android:maxLines="1"
+                        android:paddingRight="12dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F3F3" />
+
+               <!-- <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/quote_tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="商户使用服务"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quote_tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/quote_tv5"
+                        android:text="*"
+                        android:textColor="#F80C0C"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/merchants_use_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="27dp"
+                        android:layout_toRightOf="@+id/quote_tv6"
+                        android:gravity="right"
+                        android:hint="请选择商户使用服务"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/quote_iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/back_right" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F3F3" />-->
+
+                <LinearLayout
+                    android:id="@+id/merchants_use_liner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/quote_tv7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="省-市-区"
+                            android:textColor="#4C4C4C"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/quote_tv8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/quote_tv7"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/province_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="27dp"
+                            android:layout_toRightOf="@+id/quote_tv8"
+                            android:gravity="right"
+                            android:hint="请选择省市区"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/quote_iv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/back_right" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F3F3F3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/quote_tv9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="详细地址"
+                            android:textColor="#4C4C4C"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/quote_tv10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/quote_tv9"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+
+                        <EditText
+                            android:id="@+id/contact_adr_ed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/quote_tv10"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入详细地址"
+                            android:maxLines="1"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F3F3F3" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/merchants_detail_tv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="上传内景照片"
+                            android:textColor="#ff858585"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/merchants_detail_tv3"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/inDoorImages_iv"
+                            android:layout_width="151dp"
+                            android:layout_height="103dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:scaleType="fitXY"
+                            fresco:placeholderImage="@mipmap/small_merchants_neijing" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/merchants_detail_tv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="上传门头照"
+                            android:textColor="#ff858585"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/merchants_detail_tv4"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/outDoorImages_iv"
+                            android:layout_width="151dp"
+                            android:layout_height="103dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:scaleType="fitXY"
+                            fresco:placeholderImage="@mipmap/small_merchants_mentou" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/certImage_relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/merchants_detail_tv6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="上传商户证件图片"
+                            android:textColor="#ff858585"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/merchants_detail_tv6"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/certImage_iv"
+                            android:layout_width="151dp"
+                            android:layout_height="103dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:scaleType="fitXY"
+                            fresco:placeholderImage="@mipmap/small_merchants_card4" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/certImageBack_relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:id="@+id/merchants_detail_tv5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="上传证件反面"
+                            android:textColor="#ff858585"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/merchants_detail_tv5"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/certImageBack_iv"
+                            android:layout_width="151dp"
+                            android:layout_height="103dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="18dp"
+                            android:scaleType="fitXY"
+                            fresco:placeholderImage="@mipmap/small_merchants_card4" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:id="@+id/quote_tv55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="结算类型"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quote_tv66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/quote_tv55"
+                        android:text="*"
+                        android:textColor="#F80C0C"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/settlement_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="27dp"
+                        android:layout_toRightOf="@+id/quote_tv66"
+                        android:gravity="right"
+                        android:hint="请选择结算类型"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/quote_iv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/back_right" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F3F3F3" />
+
+
+                <LinearLayout
+                    android:id="@+id/zfb_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/quote_tvvv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="结算支付宝账号"
+                            android:textColor="#4C4C4C"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/quote_tvvv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/quote_tvvv1"
+                            android:text="*"
+                            android:textColor="#F80C0C"
+                            android:textSize="12sp" />
+
+
+                        <EditText
+                            android:id="@+id/alipayLogonId_ed"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toRightOf="@+id/quote_tvvv2"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="请输入结算支付宝账号"
+                            android:maxLines="1"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F3F3F3" />
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_marginLeft="12dp">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/quote_tvvv3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:text="签约支付宝账号"-->
+<!--                            android:textColor="#4C4C4C"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/quote_tvvv4"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:layout_toRightOf="@+id/quote_tvvv3"-->
+<!--                            android:text="*"-->
+<!--                            android:textColor="#F80C0C"-->
+<!--                            android:textSize="12sp" />-->
+
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/bindingAlipayLogonId_ed"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_alignParentRight="true"-->
+<!--                            android:layout_marginLeft="15dp"-->
+<!--                            android:layout_marginRight="14dp"-->
+<!--                            android:layout_toRightOf="@+id/quote_tvvv3"-->
+<!--                            android:background="@null"-->
+<!--                            android:gravity="center_vertical|right"-->
+<!--                            android:hint="请输入签约支付宝账号"-->
+<!--                            android:maxLines="1"-->
+<!--                            android:paddingRight="12dp"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="1dp"-->
+<!--                        android:background="#F3F3F3" />-->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_bt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/query_linear1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:background="@color/new_theme_color"
+                android:text="下一步 (2/2)"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

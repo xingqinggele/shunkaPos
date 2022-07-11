@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f4f4f4">
+
+    <RelativeLayout
+        android:id="@+id/merchant_squery_relative"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/new_theme_color">
+
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
+                android:src="@mipmap/back_whilte_left" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="设置金额(元)"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_above="@+id/view_line"
+        android:layout_below="@+id/merchant_squery_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/main_me_line_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:text="￥"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/money_edit"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingLeft="5dp"
+                    android:maxLines="1"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/setamount_edit_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/main_me_line_bg"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img1"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/zfb_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img1"
+                    android:text="支付宝"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <CheckBox
+                    android:checked="true"
+                    android:theme="@style/MyCheckBox"
+                    android:id="@+id/alipay_check"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/main_me_line_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@mipmap/huabei_iv"/>
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img2"
+                        android:text="花呗分期A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                    <CheckBox
+                        android:theme="@style/MyCheckBox"
+                        android:id="@+id/spend_bai_check"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+
+                <RadioGroup
+                    android:id="@+id/hua_radio_group"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:textSize="18sp"
+                        android:id="@+id/radio_btn_six"
+                        android:textColor="@color/login_radio_text"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/setamount_hua_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="6期"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"/>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <RadioButton
+                        android:textSize="18sp"
+                        android:id="@+id/radio_btn_twelve"
+                        android:textColor="@color/login_radio_text"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/setamount_hua_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="12期"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"/>
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/main_me_line_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@mipmap/huabei_iv"/>
+
+                    <TextView
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img3"
+                        android:text="花呗分期B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                    <CheckBox
+                        android:theme="@style/MyCheckBox"
+                        android:id="@+id/spend_bai_Bcheck"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+
+                <RadioGroup
+                    android:id="@+id/hua_radio_Bgroup"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:textSize="18sp"
+                        android:id="@+id/radio_btn_Bsix"
+                        android:textColor="@color/login_radio_text"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/setamount_hua_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="6期"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"/>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <RadioButton
+                        android:textSize="18sp"
+                        android:id="@+id/radio_btn_Btwelve"
+                        android:textColor="@color/login_radio_text"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/setamount_hua_radiobutton"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="12期"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"/>
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:layout_above="@+id/radio_group"
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dddddd"
+      />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/scan_btn"
+            android:checked="true"
+            android:background="@drawable/setamount_radiobutton"
+            android:textColor="@color/login_radio_text"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_weight="1"
+            android:text="扫一扫收款"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/code_btn"
+            android:background="@drawable/setamount_radiobutton"
+            android:textColor="@color/login_radio_text"
+            android:gravity="center"
+            android:button="@null"
+            android:layout_weight="1"
+            android:text="二维码收款"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </RadioGroup>
+</RelativeLayout>
